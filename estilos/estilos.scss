@@ -1,0 +1,752 @@
+// Fuentes
+$fuente: 'Manrope' ,sans-serif;
+// Colores
+$gris: #333;
+$azul: #034ea2;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: $fuente;
+    color: $gris;
+    background-color: rgb(245, 245, 245)
+}
+
+h1{font-size: 2.6em;}
+h2{font-size: 2em;}
+h3{font-size: 1.5em;}
+h4{font-size: 1.5em;}
+p{font-size: 1.1em}
+li{list-style: none;}
+i{font-size: 1.5em;}
+a{text-decoration: none; color: black;}
+span{font-weight: bold;}
+button{
+    background-color: rgb(91 94 95); 
+    color:white; 
+    border: none;
+    height: 3em;
+    padding: 1em;
+    border-radius: 5px;
+    font-family: $fuente;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 1.5em;
+}
+
+.info-sup .container{
+    margin: 1em 0;
+
+    i{
+        font-size: 1.3em;
+        color: $azul;
+        margin-right: .5em;
+    }
+
+    .tel-info-sup{
+        display: flex;
+        margin-bottom: 1em;
+        font-size: 1em;
+    }
+
+    .adress-info-sup{
+        display: flex;
+        font-size: 1em;
+    }
+}
+
+header{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+    ,url(../img/blur-hospital.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    .container-nav{
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5em;
+
+        .logo{
+            width: 60px;
+            height: 50px;
+            background-image: url(../img/logo-blanco.png);
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    nav{
+        display: none;
+    }
+
+    nav.visible {
+        display: block;
+        width: 15em;
+        height: 70vh;
+        position: absolute;
+        background-color: rgb(245,245,245);
+        right: 0em;
+        top: 8em;
+        padding: 2.5em 1em;
+
+        li{
+            margin-bottom: 1.5em;
+        }
+    }
+
+    .bars-nav{
+        cursor: pointer;
+        display: block;
+
+        #menu-abrir{
+            font-size: 2em;
+        }
+
+        #menu-cerrar{
+            display: none;
+        }
+
+        #menu-cerrar.visible{
+            display: block;
+            z-index: 99;
+            position: relative;
+            color: $gris;
+        }
+
+        #menu-abrir.visible{
+            display: none;
+        }
+    }
+
+    .text-hero{
+        height: 85%;
+        display: flex;
+        padding: 1em;
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+            font-size: 1.3em;
+            margin-bottom: .5em;
+        }
+
+        h1{
+            margin-bottom: .7em;
+        }
+
+        .btn-info{
+            font-size: 1.1em;
+            width: 35%;
+            height: 10%;
+            background-color: $azul;
+            cursor: pointer;
+            transition: .2s ease;
+
+            a{
+                color: white;
+            }
+        }
+        .btn-info:hover{
+            background-color: #035fc9;
+        }
+    }
+}
+
+.btn-subir{
+    width: 100vw;
+    position: absolute;
+    position: fixed;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-regresar{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: $azul;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+        a{
+            color: white;
+        }
+}
+
+.welcome{
+    width: 100%;
+    height: 67em;
+
+    .container{
+        width: 100%;
+        height: 70em;
+    }
+
+    .titulo-welcome{
+
+        margin-bottom: 1em;
+
+        h2{
+            text-align: center;
+            margin: 1.5em 0 1em ;
+            color: $gris;
+        }
+    
+        h2:after {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 2px;
+            width: 70px;
+            background: #333;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+        }
+        .welcome-h2-span{
+            color: $azul;
+        }
+    
+        p{
+            text-align: center;
+        }
+    }
+    
+
+    .img-doctor-welcome{
+        height: 18em;
+        width: 12em;
+        margin: auto;
+        background-image: url(../img/doctor-vertical.jpeg);
+        background-size: cover;
+    }
+
+    .mison-vision{
+        height: 30em;
+        text-align: center;
+
+        .container-cart-mision{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-top: 2em;
+
+            .cart-mision{
+    
+                h3{
+                    color: $azul;
+                }
+    
+                i{
+                    margin-bottom: .5em;
+                    font-size: 4em;
+                }
+            }
+        }
+    }
+}
+
+.nuestros-servicios{
+    text-align: center;
+    margin: 3em 0;
+
+    h2{
+        margin-bottom: 1em;
+        line-height: 1.2em;
+    }    
+
+    h2:after {
+        position: absolute;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 70px;
+        background: #333;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .span-servicios{
+        font-size: 1em;
+        color: $azul;
+    }
+
+    .container-cart-services{
+        width: 100%;
+        margin: 2.5em 0;
+
+        .cart-services{
+            width: 18em;
+            height: 20em;
+            margin: 0 auto 1.5em auto;
+            border: 1px solid rgb(225, 225, 225);
+            padding: .5em;
+            text-align: initial;
+            transition: .2s ease;
+
+            h3{
+                font-size: 1.2em;
+                margin: 1em 0 .5em 0;
+                color: #034ea2;
+            }
+            p{
+                font-size: 1em;
+                margin-bottom: .3em;
+            }
+            a{
+                color: $azul;
+                text-decoration:underline;
+            }
+        }
+
+        .cart-services:hover{
+            background-color: #034ea2;
+            color: white;
+
+            a{
+                color: white;
+            }
+
+            h3{
+                color: white;
+            }
+        }
+
+        .img-cart{
+            width: 100%;
+            height: 50%;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .img-cart-1{
+            background-image: url(../img/tobillo-fracturado.jpg);
+        }
+        .img-cart-2{
+            background-image: url(../img/examen-audicion.jpg);
+        }
+        .img-cart-3{
+            background-image: url(../img/docotr-viendo-radiografia.jpg);
+        }
+        .img-cart-4{
+            background-image: url(../img/pediatra.jpg);
+        }
+    }
+}
+
+.atencion-primaria{
+    width: 100%;
+    height: 30em;
+    background-color: $azul;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3{
+        font-size: 1.4em;
+        margin: 0 0 1em 0;
+    }
+    p{
+        font-size: 1em;
+    }
+    .atencion-btn{
+        margin: 1.5em auto;
+        background-color: $gris;
+        height: 2.5em;
+        width: 8em;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 8px black;
+        transition: .2s ease;
+    }
+    .atencion-btn:hover{
+        background-color: #636363;
+    }
+}
+
+// Estilos Glide
+.cometarios{
+    margin: 2em 0 1em 0;
+    height: 15em;
+
+    .carrusel__contenedor{
+        display: flex;
+        align-items: center;
+
+        button{
+            background-color: transparent;
+
+            i{
+                color: $gris;
+                font-size: 2em;
+                cursor: pointer;
+            }
+        }
+
+        .carrusel__elemento{
+            width: 240px;
+
+            i{
+                color: rgb(225, 225, 225);
+                font-size: 3em;
+            }
+
+            h5{
+                font-size: 1.1em;
+                margin: 0 0 0.3em;
+            }
+            p{
+                padding-bottom: 1em;
+                font-size: 1em;
+                width: 90%;
+            }
+
+        }
+    }
+}
+
+// Fin Glide
+footer{
+    width: 100%;
+    height: 10em;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    text-align: center;
+    padding: 1em;
+
+    p{
+        margin-top: 1em;
+    }
+}
+
+// EStilos de PAGE CONTACTO 
+
+.contacto-info{
+    height: 45em;
+    margin-top: 3em;
+
+    .contacto-texto{
+        height: 50%;
+        text-align: center;
+
+        .cart-contacto{
+            margin-bottom: 2.5em;
+
+            i{
+                color: $azul;
+                font-size: 2em;
+            }
+        }
+    }
+    .map{
+        display: flex;
+        justify-content: center;
+    }
+
+    iframe{
+        width: 320px;
+        height: 300px;
+    }
+}
+
+// fIN DE PAGE CONTACTO
+
+// ESTILOS PARA EL SLIDE
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
+// FIN ESTILOS SLIDE
+
+// Media queires
+
+@media (min-width: 424px){
+    header nav.visible{
+        top:6.5em;
+    }
+}
+
+@media (min-width: 450px){
+    header .text-hero p{
+        font-size:1.7em;
+    }
+
+    header .text-hero h1{
+        font-size: 11vw;
+    }
+
+    .welcome p {
+        width: 85%;
+        margin: auto;
+    }
+
+    .welcome .img-doctor-welcome{
+        height: 20em;
+        width: 15em;
+    }
+
+    .nuestros-servicios{
+
+        p{
+            width: 85%;
+            margin: auto;
+        }
+    }
+
+    .atencion-primaria p {
+        width: 85%;
+        margin: auto;
+    }
+
+    .nuestros-servicios .container-cart-services .cart-services{
+        height: 21em;
+
+        p{
+            width: 100%;
+        }
+    }
+
+    .cometarios .carrusel__contenedor .carrusel__elemento{
+        width: 318px;
+    }
+}
+
+@media (min-width: 700px){
+    .info-sup .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .bars-nav{
+        display: none;
+    }
+
+    header{
+
+        .nav-container{
+            width: 24em;
+            margin-right: 1em;
+        }
+
+        nav{
+        display: block;
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            li a{
+                color: white;
+                font-weight: bold;
+                transition: .2s ease;
+            }
+            li a:hover{
+                color: $azul;
+            }
+        }
+    }
+
+    header .text-hero h1 {
+        font-size: 10vw;
+    }
+    header .text-hero .btn-info{
+        width: 25%;
+    }
+
+    .welcome .mison-vision .cart-mision h3{
+        font-size: 1.7em;
+    }
+
+    .nuestros-servicios .container-cart-services {
+        display: flex;
+        flex-wrap: wrap;
+
+        .cart-services{
+            margin-bottom: 3em;
+        }
+    }
+
+    .welcome h2{
+        font-size: 2.5em;
+    }
+
+    .welcome .img-doctor-welcome {
+        width: 17em;
+        height: 23em;
+    }
+
+    .nuestros-servicios h2{
+        font-size: 2.5em;
+    }
+
+    .atencion-primaria h3{
+        font-size: 2em;
+    }
+
+    footer p {
+        margin-top: 1.5em;
+    }
+}
+
+@media (min-width: 900px){
+    header .text-hero p {
+        margin-bottom: 0;
+    }
+
+    header .text-hero h1 {
+        font-size: 9vw;
+        margin-bottom: 0.2em;
+    }
+
+    .mison-vision .cart-mision p{
+        width: 45%;
+    }
+    .welcome .img-doctor-welcome {
+        width: 20em;
+        height: 25em;
+    }
+    .nuestros-servicios .container-cart-services{
+        padding: 0 5em;
+    }
+
+    .contacto-info iframe{
+        width: 520px;
+    }
+}
+
+@media (min-width: 1150px){
+    header .text-hero h1 {
+        font-size: 8vw;
+    }
+
+    header .text-hero .btn-info {
+        width: 25%;
+        letter-spacing: 1px;
+    }
+
+    .welcome{
+        height: 50em;
+    }
+
+    .welcome .mison-vision {
+        height: 38em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .container-cart-mision{
+            width: 60%;
+        }
+
+        .img-doctor-welcome{
+            height: 90%;
+        }
+    }
+
+    .nuestros-servicios p {
+        width: 60%;
+    }
+    .nuestros-servicios .container-cart-services .cart-services{
+        margin: 2em auto 2em;
+    }
+
+    .atencion-primaria .container{
+        width: 100%;
+        height: 30em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text-atencion-primaria{
+            width: 50%;
+        }
+
+        .img-atencion-primaria{
+            width: 30%;
+            max-width: 370px;
+            height: 80%;
+            background-image: url(../img/doctora-cuadrada.jpeg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+        }
+    }
+
+}
+
+@media (min-width: 1360px){
+    header .text-hero h1 {
+        font-size: 7.4vw;
+        line-height: 1.2em;
+    }
+    header .text-hero .btn-info {
+        width: 15%;
+    }
+
+    .contacto-info {
+        height: 35em;
+        margin-top: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacto-info iframe {
+        width: 420px;
+        height: 400px;
+        margin-left: 8em;
+    }
+}
+
+@media (min-width: 1650px){
+    header .text-hero h1 {
+        font-size: 6.3vw;
+        line-height: 1.2em;
+    }
+    header .text-hero .btn-info {
+        width: 15%;
+    }
+}
+
+

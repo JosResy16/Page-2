@@ -1,0 +1,651 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: #333;
+  background-color: rgb(245, 245, 245);
+}
+
+h1 {
+  font-size: 2.6em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+li {
+  list-style: none;
+}
+
+i {
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+span {
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(91, 94, 95);
+  color: white;
+  border: none;
+  height: 3em;
+  padding: 1em;
+  border-radius: 5px;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 1.5em;
+}
+
+.info-sup .container {
+  margin: 1em 0;
+}
+.info-sup .container i {
+  font-size: 1.3em;
+  color: #034ea2;
+  margin-right: 0.5em;
+}
+.info-sup .container .tel-info-sup {
+  display: flex;
+  margin-bottom: 1em;
+  font-size: 1em;
+}
+.info-sup .container .adress-info-sup {
+  display: flex;
+  font-size: 1em;
+}
+
+header {
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/blur-hospital.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+header .container-nav {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+header .container-nav .logo {
+  width: 60px;
+  height: 50px;
+  background-image: url(../img/logo-blanco.png);
+  background-position: center;
+  background-size: cover;
+}
+header nav {
+  display: none;
+}
+header nav.visible {
+  display: block;
+  width: 15em;
+  height: 70vh;
+  position: absolute;
+  background-color: rgb(245, 245, 245);
+  right: 0em;
+  top: 8em;
+  padding: 2.5em 1em;
+}
+header nav.visible li {
+  margin-bottom: 1.5em;
+}
+header .bars-nav {
+  cursor: pointer;
+  display: block;
+}
+header .bars-nav #menu-abrir {
+  font-size: 2em;
+}
+header .bars-nav #menu-cerrar {
+  display: none;
+}
+header .bars-nav #menu-cerrar.visible {
+  display: block;
+  z-index: 99;
+  position: relative;
+  color: #333;
+}
+header .bars-nav #menu-abrir.visible {
+  display: none;
+}
+header .text-hero {
+  height: 85%;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  justify-content: center;
+}
+header .text-hero p {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+header .text-hero h1 {
+  margin-bottom: 0.7em;
+}
+header .text-hero .btn-info {
+  font-size: 1.1em;
+  width: 35%;
+  height: 10%;
+  background-color: #034ea2;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+header .text-hero .btn-info a {
+  color: white;
+}
+header .text-hero .btn-info:hover {
+  background-color: #035fc9;
+}
+
+.btn-subir {
+  width: 100vw;
+  position: absolute;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-subir .btn-regresar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #034ea2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-subir a {
+  color: white;
+}
+
+.welcome {
+  width: 100%;
+  height: 67em;
+}
+.welcome .container {
+  width: 100%;
+  height: 70em;
+}
+.welcome .titulo-welcome {
+  margin-bottom: 1em;
+}
+.welcome .titulo-welcome h2 {
+  text-align: center;
+  margin: 1.5em 0 1em;
+  color: #333;
+}
+.welcome .titulo-welcome h2:after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 70px;
+  background: #333;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.welcome .titulo-welcome .welcome-h2-span {
+  color: #034ea2;
+}
+.welcome .titulo-welcome p {
+  text-align: center;
+}
+.welcome .img-doctor-welcome {
+  height: 18em;
+  width: 12em;
+  margin: auto;
+  background-image: url(../img/doctor-vertical.jpeg);
+  background-size: cover;
+}
+.welcome .mison-vision {
+  height: 30em;
+  text-align: center;
+}
+.welcome .mison-vision .container-cart-mision {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+.welcome .mison-vision .container-cart-mision .cart-mision h3 {
+  color: #034ea2;
+}
+.welcome .mison-vision .container-cart-mision .cart-mision i {
+  margin-bottom: 0.5em;
+  font-size: 4em;
+}
+
+.nuestros-servicios {
+  text-align: center;
+  margin: 3em 0;
+}
+.nuestros-servicios h2 {
+  margin-bottom: 1em;
+  line-height: 1.2em;
+}
+.nuestros-servicios h2:after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 70px;
+  background: #333;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+.nuestros-servicios .span-servicios {
+  font-size: 1em;
+  color: #034ea2;
+}
+.nuestros-servicios .container-cart-services {
+  width: 100%;
+  margin: 2.5em 0;
+}
+.nuestros-servicios .container-cart-services .cart-services {
+  width: 18em;
+  height: 20em;
+  margin: 0 auto 1.5em auto;
+  border: 1px solid rgb(225, 225, 225);
+  padding: 0.5em;
+  text-align: initial;
+  transition: 0.2s ease;
+}
+.nuestros-servicios .container-cart-services .cart-services h3 {
+  font-size: 1.2em;
+  margin: 1em 0 0.5em 0;
+  color: #034ea2;
+}
+.nuestros-servicios .container-cart-services .cart-services p {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+}
+.nuestros-servicios .container-cart-services .cart-services a {
+  color: #034ea2;
+  text-decoration: underline;
+}
+.nuestros-servicios .container-cart-services .cart-services:hover {
+  background-color: #034ea2;
+  color: white;
+}
+.nuestros-servicios .container-cart-services .cart-services:hover a {
+  color: white;
+}
+.nuestros-servicios .container-cart-services .cart-services:hover h3 {
+  color: white;
+}
+.nuestros-servicios .container-cart-services .img-cart {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+}
+.nuestros-servicios .container-cart-services .img-cart-1 {
+  background-image: url(../img/tobillo-fracturado.jpg);
+}
+.nuestros-servicios .container-cart-services .img-cart-2 {
+  background-image: url(../img/examen-audicion.jpg);
+}
+.nuestros-servicios .container-cart-services .img-cart-3 {
+  background-image: url(../img/docotr-viendo-radiografia.jpg);
+}
+.nuestros-servicios .container-cart-services .img-cart-4 {
+  background-image: url(../img/pediatra.jpg);
+}
+
+.atencion-primaria {
+  width: 100%;
+  height: 30em;
+  background-color: #034ea2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.atencion-primaria h3 {
+  font-size: 1.4em;
+  margin: 0 0 1em 0;
+}
+.atencion-primaria p {
+  font-size: 1em;
+}
+.atencion-primaria .atencion-btn {
+  margin: 1.5em auto;
+  background-color: #333;
+  height: 2.5em;
+  width: 8em;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 8px black;
+  transition: 0.2s ease;
+}
+.atencion-primaria .atencion-btn:hover {
+  background-color: #636363;
+}
+
+.cometarios {
+  margin: 2em 0 1em 0;
+  height: 15em;
+}
+.cometarios .carrusel__contenedor {
+  display: flex;
+  align-items: center;
+}
+.cometarios .carrusel__contenedor button {
+  background-color: transparent;
+}
+.cometarios .carrusel__contenedor button i {
+  color: #333;
+  font-size: 2em;
+  cursor: pointer;
+}
+.cometarios .carrusel__contenedor .carrusel__elemento {
+  width: 240px;
+}
+.cometarios .carrusel__contenedor .carrusel__elemento i {
+  color: rgb(225, 225, 225);
+  font-size: 3em;
+}
+.cometarios .carrusel__contenedor .carrusel__elemento h5 {
+  font-size: 1.1em;
+  margin: 0 0 0.3em;
+}
+.cometarios .carrusel__contenedor .carrusel__elemento p {
+  padding-bottom: 1em;
+  font-size: 1em;
+  width: 90%;
+}
+
+footer {
+  width: 100%;
+  height: 10em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+footer p {
+  margin-top: 1em;
+}
+
+.contacto-info {
+  height: 45em;
+  margin-top: 3em;
+}
+.contacto-info .contacto-texto {
+  height: 50%;
+  text-align: center;
+}
+.contacto-info .contacto-texto .cart-contacto {
+  margin-bottom: 2.5em;
+}
+.contacto-info .contacto-texto .cart-contacto i {
+  color: #034ea2;
+  font-size: 2em;
+}
+.contacto-info .map {
+  display: flex;
+  justify-content: center;
+}
+.contacto-info iframe {
+  width: 320px;
+  height: 300px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(5px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+
+@media (min-width: 424px) {
+  header nav.visible {
+    top: 6.5em;
+  }
+}
+@media (min-width: 450px) {
+  header .text-hero p {
+    font-size: 1.7em;
+  }
+  header .text-hero h1 {
+    font-size: 11vw;
+  }
+  .welcome p {
+    width: 85%;
+    margin: auto;
+  }
+  .welcome .img-doctor-welcome {
+    height: 20em;
+    width: 15em;
+  }
+  .nuestros-servicios p {
+    width: 85%;
+    margin: auto;
+  }
+  .atencion-primaria p {
+    width: 85%;
+    margin: auto;
+  }
+  .nuestros-servicios .container-cart-services .cart-services {
+    height: 21em;
+  }
+  .nuestros-servicios .container-cart-services .cart-services p {
+    width: 100%;
+  }
+  .cometarios .carrusel__contenedor .carrusel__elemento {
+    width: 318px;
+  }
+}
+@media (min-width: 700px) {
+  .info-sup .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .bars-nav {
+    display: none;
+  }
+  header .nav-container {
+    width: 24em;
+    margin-right: 1em;
+  }
+  header nav {
+    display: block;
+  }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  header ul li a {
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease;
+  }
+  header ul li a:hover {
+    color: #034ea2;
+  }
+  header .text-hero h1 {
+    font-size: 10vw;
+  }
+  header .text-hero .btn-info {
+    width: 25%;
+  }
+  .welcome .mison-vision .cart-mision h3 {
+    font-size: 1.7em;
+  }
+  .nuestros-servicios .container-cart-services {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .nuestros-servicios .container-cart-services .cart-services {
+    margin-bottom: 3em;
+  }
+  .welcome h2 {
+    font-size: 2.5em;
+  }
+  .welcome .img-doctor-welcome {
+    width: 17em;
+    height: 23em;
+  }
+  .nuestros-servicios h2 {
+    font-size: 2.5em;
+  }
+  .atencion-primaria h3 {
+    font-size: 2em;
+  }
+  footer p {
+    margin-top: 1.5em;
+  }
+}
+@media (min-width: 900px) {
+  header .text-hero p {
+    margin-bottom: 0;
+  }
+  header .text-hero h1 {
+    font-size: 9vw;
+    margin-bottom: 0.2em;
+  }
+  .mison-vision .cart-mision p {
+    width: 45%;
+  }
+  .welcome .img-doctor-welcome {
+    width: 20em;
+    height: 25em;
+  }
+  .nuestros-servicios .container-cart-services {
+    padding: 0 5em;
+  }
+  .contacto-info iframe {
+    width: 520px;
+  }
+}
+@media (min-width: 1150px) {
+  header .text-hero h1 {
+    font-size: 8vw;
+  }
+  header .text-hero .btn-info {
+    width: 25%;
+    letter-spacing: 1px;
+  }
+  .welcome {
+    height: 50em;
+  }
+  .welcome .mison-vision {
+    height: 38em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .welcome .mison-vision .container-cart-mision {
+    width: 60%;
+  }
+  .welcome .mison-vision .img-doctor-welcome {
+    height: 90%;
+  }
+  .nuestros-servicios p {
+    width: 60%;
+  }
+  .nuestros-servicios .container-cart-services .cart-services {
+    margin: 2em auto 2em;
+  }
+  .atencion-primaria .container {
+    width: 100%;
+    height: 30em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .atencion-primaria .container .text-atencion-primaria {
+    width: 50%;
+  }
+  .atencion-primaria .container .img-atencion-primaria {
+    width: 30%;
+    max-width: 370px;
+    height: 80%;
+    background-image: url(../img/doctora-cuadrada.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 1360px) {
+  header .text-hero h1 {
+    font-size: 7.4vw;
+    line-height: 1.2em;
+  }
+  header .text-hero .btn-info {
+    width: 15%;
+  }
+  .contacto-info {
+    height: 35em;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contacto-info iframe {
+    width: 420px;
+    height: 400px;
+    margin-left: 8em;
+  }
+}
+@media (min-width: 1650px) {
+  header .text-hero h1 {
+    font-size: 6.3vw;
+    line-height: 1.2em;
+  }
+  header .text-hero .btn-info {
+    width: 15%;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
